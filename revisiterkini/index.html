@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <h1 data-testid="app-title">Rak Buku Saya</h1>
+        
+        <!-- Form untuk menambahkan buku baru -->
+        <section class="add-book-section">
+            <h2 data-testid="add-book-title">Tambahkan Buku Baru</h2>
+            <form id="book-form" data-testid="bookForm">
+                <label for="title">Judul:</label>
+                <input type="text" id="title" required data-testid="bookFormTitleInput">
+                
+                <label for="author">Penulis:</label>
+                <input type="text" id="author" required data-testid="bookFormAuthorInput">
+                
+                <label for="year">Tahun Terbit:</label>
+                <input type="number" id="year" required data-testid="bookFormYearInput">
+                
+                <label for="isComplete">Sudah Dibaca:</label>
+                <input type="checkbox" id="isComplete" data-testid="bookFormIsCompleteCheckbox">
+                
+                <button type="submit" data-testid="bookFormSubmitButton">Tambah Buku</button>
+            </form>
+        </section>
+
+        <!-- Form pencarian buku -->
+        <section class="search-book-section">
+            <h2>Cari Buku</h2>
+            <form id="search-book-form" data-testid="searchBookForm">
+                <input type="text" id="search-title" placeholder="Cari berdasarkan judul..." data-testid="searchBookFormTitleInput">
+                <button type="submit" data-testid="searchBookFormSubmitButton">Cari</button>
+            </form>
+        </section>
+ 
+        <!-- Rak Belum Selesai Dibaca -->
+        <section class="bookshelf incomplete-shelf">
+            <h3 data-testid="incomplete-shelf-title">Belum Selesai Dibaca</h3>
+            <ul id="incomplete-books" data-testid="incompleteBookList" class="book-list"></ul>
+        </section>
+ 
+        <!-- Rak Selesai Dibaca -->
+        <section class="bookshelf complete-shelf">
+            <h3 data-testid="complete-shelf-title">Selesai Dibaca</h3>
+            <ul id="complete-books" data-testid="completeBookList" class="book-list"></ul>
+        </section>
+    </main>
+ 
+    <script src="script.js"></script>
+</body>
+</html>

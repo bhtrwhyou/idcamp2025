@@ -1,0 +1,216 @@
+/* Reset dan base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #520404;
+    padding: 20px;
+}
+ 
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+ 
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+ 
+/* Form tambah buku */
+.add-book-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+ 
+.add-book-section h2 {
+    margin-bottom: 15px;
+    color: #34495e;
+}
+ 
+#book-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+ 
+#book-form label {
+    font-weight: bold;
+}
+ 
+#book-form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+ 
+#book-form button {
+    padding: 10px;
+    background-color: #3b0a0a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+ 
+#book-form button:hover {
+    background-color: #4a0c0c;
+}
+
+/* Form pencarian */
+.search-book-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f9f9f9;
+}
+
+.search-book-section h2 {
+    margin-bottom: 15px;
+    color: #34495e;
+}
+
+#search-book-form {
+    display: flex;
+    gap: 10px;
+}
+
+#search-book-form input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#search-book-form button {
+    padding: 8px 15px;
+    background-color: #3b0a0a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-book-form button:hover {
+    background-color: #4a0c0c;
+}
+ 
+/* Rak buku */
+.bookshelf {
+    margin-bottom: 30px;
+}
+ 
+.bookshelf h3 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+    border-bottom: 2px solid #930c0c;
+    padding-bottom: 5px;
+}
+ 
+.incomplete-shelf {
+    background-color: #2a0909;
+    padding: 15px;
+    border-radius: 5px;
+}
+ 
+.complete-shelf {
+    background-color: #b11414;
+    padding: 15px;
+    border-radius: 5px;
+}
+ 
+.book-list {
+    list-style: none;
+}
+ 
+.book-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+ 
+.book-details {
+    flex-grow: 1;
+}
+ 
+.book-details h3 {
+    margin-bottom: 5px;
+    color: #34495e;
+}
+ 
+.book-details p {
+    margin-bottom: 5px;
+    color: #7f8c8d;
+}
+ 
+.book-actions {
+    display: flex;
+    gap: 10px;
+}
+ 
+.book-actions button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+ 
+.book-actions button[data-testid="bookItemIsCompleteButton"] {
+    background-color: #b11313;
+    color: white;
+}
+ 
+.book-actions button[data-testid="bookItemIsCompleteButton"]:hover {
+    background-color: #9c1616;
+}
+ 
+.book-actions button[data-testid="bookItemDeleteButton"] {
+    background-color: #737e65;
+    color: white;
+}
+ 
+.book-actions button[data-testid="bookItemDeleteButton"]:hover {
+    background-color: #5a4a3a;
+}
+ 
+/* Responsive */
+@media (max-width: 600px) {
+    .book-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .book-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    #search-book-form {
+        flex-direction: column;
+    }
+}
