@@ -1,0 +1,114 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --dark-bg: #1a1a1a;
+  --dark-card: #2a2a2a;
+  --accent: #e63946;
+  --secondary: #457b9d;
+  --text: #f1faee;
+  --gold: #ffd700;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--dark-bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background: var(--accent);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+header h1 { font-size: 1.8rem; }
+nav ul { display: flex; list-style: none; gap: 1.2rem; }
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: bold;
+}
+nav a:hover { color: var(--gold); }
+
+/* Main */
+main {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  flex: 1;
+}
+article, aside {
+  background: var(--dark-card);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+article { flex: 2; }
+aside { flex: 1; }
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.gallery-item img,
+aside img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Button */
+.btn-lampung {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 20px;
+  font-weight: bold;
+}
+.btn-lampung.green { background: var(--secondary); }
+.btn-lampung:hover { opacity: 0.8; }
+
+/* Footer */
+footer {
+  background: var(--accent);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+footer .watermark {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: var(--gold);
+}
+.footer-icons {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.footer-icons a {
+  color: white;
+  font-size: 1.4rem;
+}
+.footer-icons a:hover { color: var(--gold); }
+
+/* Responsive */
+@media (max-width: 768px) {
+  main { flex-direction: column; }
+}
